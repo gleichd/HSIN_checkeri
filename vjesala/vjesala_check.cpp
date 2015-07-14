@@ -54,7 +54,7 @@ int main (int num, char **arg){
   sscanf(cOutput.c_str(), "%d", &b);
 
   if (a != b){
-    printf("Minimalan broj pritisaka tipke nije ispravan!\n");
+    printf("0\nMinimalan broj pritisaka tipke nije ispravan!\n");
     return 0;
   }
 
@@ -63,7 +63,7 @@ int main (int num, char **arg){
 
   for (auto x: cOutput)
     if (!isupper(x) || !isalpha(x)) {
-      printf("Postoji znak koji nije veliko slovo %c!\n", x);
+      printf("0\nPostoji znak koji nije veliko slovo %c!\n", x);
       return 0;
     }
 
@@ -76,10 +76,10 @@ int main (int num, char **arg){
   dist += (int)cOutput.length() - 1;
 
   if (dist != b){
-    printf("Broj pritisaka tipaka nije jednak onom ispisanom.\n");
+    printf("0\nBroj pritisaka tipaka nije jednak onom ispisanom.\n");
     return 0;
   }
 
-  printf("Tocno rjesenje!\n");
+  printf("1\nTocno rjesenje!\n");
   return 0;
 }

@@ -52,22 +52,22 @@ int main (int num, char **arg){
   auto B = genDecomposition(cOutput);
   
   if (A.size() != B.size()){
-    if (A.size() < B.size()) printf("Postoji rastav s manjim brojem rijeci!\n");
-    if (A.size() > B.size()) printf("Ne postoji takav rastav rijeci!\n");
+    if (A.size() < B.size()) printf("0\nPostoji rastav s manjim brojem rijeci!\n");
+    if (A.size() > B.size()) printf("0\nNe postoji takav rastav rijeci!\n");
     return 0;
   }
 
   if (input != join(B)){
-    printf("Spajavanjem svih rijeci ne dobiva se ulazna rijec!\n");
+    printf("0\nSpajavanjem svih rijeci ne dobiva se ulazna rijec!\n");
     return 0;
   }
 
   for (auto x: B)
     if (!anadrom(x)){
-      printf("Postoji rijec koja nije anadrom!\n");
+      printf("0\nPostoji rijec koja nije anadrom!\n");
       return 0;
     }
 
-  printf("Tocno rjesenje!\n");
+  printf("1\nTocno rjesenje!\n");
   return 0;
 }

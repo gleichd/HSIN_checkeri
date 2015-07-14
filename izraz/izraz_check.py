@@ -20,15 +20,15 @@ cmpLines = out.readlines();
 offVal = eval(offLines[0])
 
 if goodLine(line, cmpLines[0]) == False:
-    print 'Izraz nije validan.'
+    print '0\nIzraz nije validan.'
     sys.exit()
 
 if int(eval(cmpLines[0])) != int(cmpLines[1]): 
-    print 'Izraz nije dobro izracunat.'
+    print '0\nIzraz nije dobro izracunat.'
     sys.exit()
 
 if int(eval(cmpLines[0])) != int(offLines[1]):
-    print 'Izraz nije maksimalan.'
+    print '0\nIzraz nije maksimalan.'
     sys.exit()
 
-print 'Tocno rjesenje!'
+print '1\nTocno rjesenje!'
